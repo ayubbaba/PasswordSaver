@@ -16,7 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Save_Data" />
+        <activity android:name=".Save_Data"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
     </application>
 
 </manifest>
