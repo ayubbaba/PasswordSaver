@@ -1,17 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:fab="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.ayubbaba.passwordsaver.passwordsaver.MainActivity">
+    android:id="@+id/mainview">
 
-    <com.github.clans.fab.FloatingActionMenu
+    <TextView
+        android:layout_width="368dp"
+        android:layout_height="429dp"
+        android:text="Hello world"
+        android:textColor="#000"
+        android:textSize="26sp"
+        android:id="@+id/text"
+        />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/savebutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        fab:menu_colorNormal="@color/colorPrimary"
-        fab:menu_colorPressed="@color/colorAccent"
+        android:src="@android:drawable/ic_dialog_email"
+        app:fabSize="normal"
         fab:layout_constraintBottom_toBottomOf="parent"
-        fab:layout_constraintRight_toRightOf="parent"/>
+        fab:layout_constraintRight_toRightOf="parent" />
 </android.support.constraint.ConstraintLayout>
