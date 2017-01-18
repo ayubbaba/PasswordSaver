@@ -2,19 +2,14 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:fab="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainview"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:id="@+id/mainview">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="368dp"
-        android:layout_height="429dp"
-        android:text="Hello world"
-        android:textColor="#000"
-        android:textSize="26sp"
-        android:id="@+id/text"
-        />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/passwordlist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/savebutton"
