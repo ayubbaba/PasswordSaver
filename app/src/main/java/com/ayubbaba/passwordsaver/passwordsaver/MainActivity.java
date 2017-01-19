@@ -10,7 +10,6 @@ import adapter.SaveData_adapter;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import helper.Constant;
 import io.realm.Realm;
 import io.realm.RealmResults;
 import pojo.SaveDataPojo;
@@ -32,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
         mainrealm.beginTransaction();
         RealmResults<SaveDataPojo> savedataresult=mainrealm.where(SaveDataPojo.class).findAll();
         saveData_adapter=new SaveData_adapter(savedataresult);
-        Constant.l(savedataresult.toString());
         passwordlist.setAdapter(saveData_adapter);
         saveData_adapter.notifyDataSetChanged();
         mainrealm.commitTransaction();

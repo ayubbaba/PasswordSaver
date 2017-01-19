@@ -30,6 +30,7 @@
         android:layout_marginRight="10dp"
         android:layout_marginTop="20dp"
         android:hint="Password"
+        android:inputType="textPassword"
         app:met_baseColor="@color/colorPrimary"
         app:met_clearButton="true"
         app:met_floatingLabel="highlight"

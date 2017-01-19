@@ -17,7 +17,7 @@ import pojo.SaveDataPojo;
  * Created by ayub on 19-Jan-17.
  */
 
-public class SaveData_adapter extends RecyclerView.Adapter<SaveData_adapter.SaveData_ViewHolder>{
+public class SaveData_adapter extends RecyclerView.Adapter<SaveData_adapter.SaveData_ViewHolder> {
     RealmResults<SaveDataPojo> saveDataPojos;
 
     public SaveData_adapter(RealmResults<SaveDataPojo> saveDataPojos) {
@@ -26,14 +26,15 @@ public class SaveData_adapter extends RecyclerView.Adapter<SaveData_adapter.Save
 
     @Override
     public SaveData_ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View saveview= LayoutInflater.from(parent.getContext()).inflate(R.layout.save_data_row,parent,false);
+        View saveview = LayoutInflater.from(parent.getContext()).inflate(R.layout.save_data_row, parent, false);
         return new SaveData_ViewHolder(saveview);
     }
 
     @Override
     public void onBindViewHolder(SaveData_ViewHolder holder, int position) {
-        SaveDataPojo savepojo=saveDataPojos.get(position);
+        SaveDataPojo savepojo = saveDataPojos.get(position);
         holder.name.setText(savepojo.getEmail());
+        holder.password.setText(savepojo.getPassword());
     }
 
     @Override
@@ -41,13 +42,15 @@ public class SaveData_adapter extends RecyclerView.Adapter<SaveData_adapter.Save
         return saveDataPojos.size();
     }
 
-    public static class SaveData_ViewHolder extends RecyclerView.ViewHolder{
+    public static class SaveData_ViewHolder extends RecyclerView.ViewHolder {
         @BindView(R.id.name)
         TextView name;
+        @BindView(R.id.password)
+        TextView password;
 
-    public SaveData_ViewHolder(View itemView) {
-        super(itemView);
-        ButterKnife.bind(this,itemView);
+        public SaveData_ViewHolder(View itemView) {
+            super(itemView);
+            ButterKnife.bind(this, itemView);
+        }
     }
-}
 }
