@@ -33,6 +33,7 @@ dependencies {
     compile 'com.jakewharton:butterknife:8.4.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
     compile 'com.github.medyo:fancybuttons:1.8.3'
+    compile 'com.rengwuxian.materialedittext:library:2.1.4'
     /*compile('com.mikepenz:fastadapter:2.1.6@aar') {
         transitive = true
     }

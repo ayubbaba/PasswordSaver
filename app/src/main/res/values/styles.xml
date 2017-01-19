@@ -8,9 +8,5 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="savedstyles" parent="@android:style/TextAppearance">
-        <item name="android:textColorHint">@color/colorPrimaryDark</item>
-        <item name="android:textSize">14sp</item>
-    </style>
 
 </resources>

@@ -6,41 +6,37 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <android.support.design.widget.TextInputLayout
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/emailid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginTop="20dp"
-        app:hintTextAppearance="@style/savedstyles">
+        android:hint="Email Id"
+        app:met_baseColor="@color/colorPrimary"
+        app:met_clearButton="true"
+        app:met_floatingLabel="highlight"
+        app:met_primaryColor="@color/colorPrimary"
+        app:met_singleLineEllipsis="true"
+        app:met_textColor="@color/black"
+        app:met_textColorHint="@color/hintcolor" />
 
-        <android.support.design.widget.TextInputEditText
-            android:id="@+id/emailid"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Email"
-            android:textColor="#000"
-            android:inputType="textEmailAddress" />
-
-    </android.support.design.widget.TextInputLayout>
-
-    <android.support.design.widget.TextInputLayout
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginTop="20dp"
-        app:passwordToggleEnabled="true"
-        app:hintTextAppearance="@style/savedstyles">
-
-        <android.support.design.widget.TextInputEditText
-            android:id="@+id/password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Password"
-            android:inputType="textPassword" />
-
-    </android.support.design.widget.TextInputLayout>
+        android:hint="Password"
+        app:met_baseColor="@color/colorPrimary"
+        app:met_clearButton="true"
+        app:met_floatingLabel="highlight"
+        app:met_primaryColor="@color/colorPrimary"
+        app:met_singleLineEllipsis="true"
+        app:met_textColor="@color/black"
+        app:met_textColorHint="@color/hintcolor" />
 
 
     <mehdi.sakout.fancybuttons.FancyButton

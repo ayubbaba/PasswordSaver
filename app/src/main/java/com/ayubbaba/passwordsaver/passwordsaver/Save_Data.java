@@ -33,6 +33,8 @@ public class Save_Data extends AppCompatActivity {
         imm.hideSoftInputFromWindow(password.getWindowToken(),0);
         emailid.setEnabled(false);
         password.setEnabled(false);
+        emailid.clearFocus();
+        password.clearFocus();
         Constant.t(findViewById(R.id.savebutton),"Save Button Clicked");
     }
 }
