@@ -1,19 +1,15 @@
 package com.ayubbaba.passwordsaver.passwordsaver;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.view.inputmethod.InputMethodManager;
-import android.widget.EditText;
 
 import com.rengwuxian.materialedittext.MaterialEditText;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import helper.Constant;
 import io.realm.Realm;
 import io.realm.RealmResults;
 import pojo.SaveDataPojo;
@@ -23,8 +19,8 @@ import pojo.SaveDataPojo;
  */
 
 public class Save_Data extends AppCompatActivity {
-    @BindView(R.id.emailid)
-    MaterialEditText emailid;
+    /*@BindView(R.id.emailid)
+    MaterialEditText emailid;*/
     @BindView(R.id.password)
     MaterialEditText password;
     Realm saverealm;
@@ -41,6 +37,7 @@ public class Save_Data extends AppCompatActivity {
             count=savedataresult.size();
             saverealm.commitTransaction();
         }
+
     }
 
     @OnClick(R.id.savebutton)
@@ -54,7 +51,7 @@ public class Save_Data extends AppCompatActivity {
         saverealm.beginTransaction();
         SaveDataPojo savepojo=saverealm.createObject(SaveDataPojo.class);
         savepojo.setId(count++);
-        savepojo.setEmail(emailid.getText().toString());
+//        savepojo.setEmail(emailid.getText().toString());
         savepojo.setPassword(password.getText().toString());
         saverealm.commitTransaction();
         startActivity(new Intent(getApplicationContext(),MainActivity.class));

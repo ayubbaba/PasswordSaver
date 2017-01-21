@@ -6,7 +6,20 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.rengwuxian.materialedittext.MaterialEditText
+
+    <helper.CustomTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:text="Custom Text"
+        android:textSize="18sp"
+        android:id="@+id/emailid"
+        android:gravity="center"
+        app:drawableclick="true"/>
+
+    <!--<com.rengwuxian.materialedittext.MaterialEditText
         android:id="@+id/emailid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -20,7 +33,7 @@
         app:met_primaryColor="@color/colorPrimary"
         app:met_singleLineEllipsis="true"
         app:met_textColor="@color/black"
-        app:met_textColorHint="@color/hintcolor" />
+        app:met_textColorHint="@color/hintcolor" />-->
 
     <com.rengwuxian.materialedittext.MaterialEditText
         android:id="@+id/password"
